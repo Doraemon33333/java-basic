@@ -4,16 +4,19 @@ package day9;
 
 import day8.kitchen.Ramen;
 
+import java.util.Scanner;
+
 public class StudentTest {
     public static void main(String[] args) {
 
-        /*Student cristiano = new Student(); //이 뒤로 정보를  넣어줘야함
+        Student sato = new Student(); //이 뒤로 정보를  넣어줘야함
         Scanner sc = new Scanner(System.in);
-        cristiano.setStudentID(850205);
-        cristiano.studentname = "호날두";
+        //sato.setStudentID(123214);
+        sato.studentname = "MANA";
 
-        System.out.println(cristiano.getStudentID());   //아까 프라이빗 했을때 안되었음 다른 파일에 적었던 get 이용
-        System.out.println(cristiano.studentname);*/
+        System.out.println(sato.getStudentID());   //아까 프라이빗 했을때 안되었음 다른 파일에 적었던 get 이용
+        System.out.println(sato.studentname);
+
 
         Student kim = new Student(141122, "김さん", 1, "부산 중구");
         System.out.println(kim.studentname + "의 학번은 " + kim.getStudentID() + "입니다");

@@ -8,7 +8,10 @@ public class Student {
     private int studentID;  //ex) 프라이빗하면 딱 요 해당 클래스에서만 허용하게해서 다른곳에서 오류뜸
 
     //생성자
-    //Student() {};  //(생성자)이거를 써야함
+    Student() {
+    }
+
+    ;  //(생성자)이거를 써야함
 
     Student(int studentID, String studentname, int grade, String address) {
         this.studentID = studentID;
