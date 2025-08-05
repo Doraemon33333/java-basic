@@ -1,37 +1,36 @@
 package day4.ifexample;
+
 import java.util.Scanner;
-public class ifBMIQuestion {
+
+public class ifBMI {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
         //문제 1
 
-        while(true){
+        while (true) {
             System.out.print("체중을 입력하세요(kg) : ");
             float weight = input.nextFloat();
 
             System.out.print("신장을 입력하세요(cm) : ");
             float height = input.nextFloat();
 
-            double BMI = weight / ((height/100)*(height/100));
+            double BMI = weight / ((height / 100) * (height / 100));
 
             String your_weight;
 
-            if(weight == 0 || height == 0){
+            if (weight == 0 || height == 0) {
                 break;
             }
 
-            if(BMI < 18.5){
+            if (BMI < 18.5) {
                 your_weight = "저체중";           // -> 한줄이면 중괄호 굳이 없어도 됨
-            }
-            else if(BMI < 23){
+            } else if (BMI < 23) {
                 your_weight = "정상";
-            }
-            else if(BMI < 25){
+            } else if (BMI < 25) {
                 your_weight = "과체중";
-            }
-            else{
+            } else {
                 your_weight = "비만";
             }
 
