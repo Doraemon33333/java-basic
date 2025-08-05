@@ -16,4 +16,5 @@ public class Phone {
     public double getPrice() {
         return price;
     }
+
 }
