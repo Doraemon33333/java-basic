@@ -1,12 +1,10 @@
 package day9.encapsulation;
 
 public class PhoneStore {
-    Customer customer;
     private Phone phone;
 
     public PhoneStore(Phone phone) {
         this.phone = phone;
-
     }
 
 
@@ -22,10 +20,24 @@ public class PhoneStore {
      *
      * @return
      */
-    public Phone sellPhone(String phoneModel, double budget) {
 
-        registerPayment();
-        discountPromotion();
+
+    public Phone sellPhone(String hosiiModel, double budget) {
+        if (phone.getModel().equals(hosiiModel) && budget >= phone.getPrice()) {
+            System.out.println("대리점: 판매 가능합니다");
+            registerPayment();
+            discountPromotion();
+            return phone;
+        } else {
+            if (budget <= phone.getPrice()) {
+                System.out.println("대리점: 예산이 부족하여 판매 불가 합니다");
+                return null;
+            } else {
+                System.out.println("대리점 : 원하는 모델이 없습니다");
+                return null;
+            }
+
+        }
 
         // 대리점이 휴대폰을 판매할때 일어나는일
 
@@ -36,10 +48,8 @@ public class PhoneStore {
             System.out.println("돈이 부족하네요");
         }*/
 
-        System.out.println("(사실 이분 부자라서 가격 신경안씀) ");
+        //System.out.println("(사실 이분 부자라서 가격 신경안씀) ");
 
-        System.out.println(" 대리점 : " + phoneModel + "휴대폰 전달 ");
-        return phone;
     }
 
     private void registerPayment() {

@@ -25,12 +25,12 @@ public class Customer {
      * @param store
      */
 
-    public void buyphone(PhoneStore store) {
+    public void buyphone(PhoneStore store, String hosiiModel) {
         //고객이 들어옴 ㅋ
         System.out.println(name + " 님이 스토어에 입장하였습니다");
 
         // 고객이 휴대폰을 살 때 일어나는 일
-        Phone phone = store.sellPhone("아이폰 ", budget);
+        Phone phone = store.sellPhone(hosiiModel, budget);
         //phone.getModel();
 
         // 대리점이 휴대폰을 팔수 있냐 없냐를 구분하는 분기
@@ -39,37 +39,12 @@ public class Customer {
         // 구입 못 했을때의 ..
 
 
-        if (phone.getModel() == "아이폰") {
-            System.out.println("고객 : 핸드폰 " + phone.getModel() + " 구입이 완료되었습ㄴ");
+        if (phone != null) {
+            System.out.println(name + " : " + phone.getModel() + " 구입 하겠습니다");
         } else {
-            System.out.println("고객 : 원하는 핸드폰이 아니므로 다음에 사겠습니다");
+            System.out.println(name + " : 다음에 다시 오겠습니다.");
         }
 
     }
-    // store에서 폰을 사는 함수
-    /*public void buyphone(PhoneStore store){
-        // store에는 폰이 존재합니다.
-        // 매장에 폰이 있는지 물어봅니다.
-        // 매장에 폰이 있는지 확인하는 함수
-        // findPhone(store); --> store에서 phone이 있으면 폰을 주고 없으면 null을 줍니다.
-        // sellPhone();
 
-    }*/
-
-
-
-
-    /*public void buyphone2(PhoneStore store2) {
-        System.out.println(name + " 님이 스토어에 입장하였습니다");
-
-        // 고객이 휴대폰을 살 때 일어나는 일
-        Phone phone = store2.sellPhone("갤럭시?", budget);
-        phone.getModel();
-        if (phone.getModel() == "아이폰") {
-            System.out.println("고객 : 핸드폰 " + phone.getModel() + " 구입이 완료되었습ㄴ");
-        } else {
-            System.out.println("고객 : 원하는 핸드폰이 아니므로 다음에 사겠습니다");
-        }
-
-    }*/
 }
