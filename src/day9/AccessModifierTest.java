@@ -27,12 +27,12 @@ public class AccessModifierTest {
 
     }
 
-    public static void printStatus(Ramen ramen) {
-        boolean flag = ramen.getisCooked();
+    public static void printStatus(Ramen ram) {
+        boolean flag = ram.getisCooked();
         if (flag) {
-            System.out.println("새로 생성된 라면 인스턴스 " + ramen.noodleType + "는 조리된 상태 ");
+            System.out.println("새로 생성된 라면 인스턴스 " + ram.noodleType + "는 조리된 상태 ");
         } else {
-            System.out.println("새로 생성된 라면 인스턴스 " + ramen.noodleType + "는 조리가 덜 된 상태 ");
+            System.out.println("새로 생성된 라면 인스턴스 " + ram.noodleType + "는 조리가 덜 된 상태 ");
         }
     }
 

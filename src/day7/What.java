@@ -44,6 +44,11 @@ public class What {
                 case 6:
                     seiseki(input);
                     break;
+                //성적 출력결과 Student[] = new Student[3]
+                // 학생 객체안에 성적 결과를 출력하는 메서드를 만들것
+                // 학생 객체의 생성은 현재 클래스 안에서 입력받아 만들것
+                // 배열이 완성되면 각 학생의 성적 결과를 출력하고 끝내기
+
             }
         }
     }

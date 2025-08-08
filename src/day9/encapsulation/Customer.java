@@ -38,7 +38,6 @@ public class Customer {
         // 구입 했을때의 출력물
         // 구입 못 했을때의 ..
 
-
         if (phone != null) {
             System.out.println(name + " : " + phone.getModel() + " 구입 하겠습니다");
         } else {

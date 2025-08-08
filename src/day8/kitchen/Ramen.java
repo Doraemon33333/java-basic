@@ -2,7 +2,9 @@ package day8.kitchen;
 
 public class Ramen {
     //필드  :  맴버 변수 생성
+    static int serialNum = 1;
     public String noodleType;
+    int ramNum;
     String soupType;
     boolean isCooked;
 
@@ -18,6 +20,8 @@ public class Ramen {
 
     //생성자는 같은 이름으로 여러개 만들수 있다. -> 생성자 오버로드
     public Ramen(String rnoodleType, String rsoupType) {
+        serialNum++;
+        this.ramNum = serialNum;
         noodleType = rnoodleType;
         soupType = rsoupType;
         isCooked = false;  // 아직 cook을 실행되기 전이므로 false 해주는게 좋음
@@ -45,7 +49,7 @@ public class Ramen {
         addNoodles();
         addSoup();
         isCooked = true;
-        System.out.println("終わった");
+        System.out.println(ramNum + "번 라면 終わった");
     }
 
     public boolean getisCooked() {

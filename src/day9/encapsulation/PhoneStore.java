@@ -48,7 +48,6 @@ public class PhoneStore {
             System.out.println("돈이 부족하네요");
         }*/
 
-        //System.out.println("(사실 이분 부자라서 가격 신경안씀) ");
 
     }
 
