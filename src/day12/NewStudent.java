@@ -16,13 +16,16 @@ public class NewStudent {
         this.score = score;
     }
 
-
     public int getStudentID() {
         return studentID;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int[] getScore() {

@@ -34,15 +34,20 @@ public class NewStudentTest {
                 case 4:
                     studentrepair(input);
                     break;
+                case 5:
+                    studentdelete(input);
+                    break;
+
             }
             System.out.println("2. 학생 정보 읽기");
             System.out.println("3. 학생 정보 출력");
             System.out.println("4. 학생 정보 수정");
+            System.out.println("5. 학생 정보 삭제");
             System.out.println("0. 시스템 종료");
             System.out.print("뭐를 원하는가? ");
         }
 
-        //System.out.println("학생 정보 삭제");
+
     }
 
     public static void pldsafqqg(Scanner input) {
@@ -91,27 +96,46 @@ public class NewStudentTest {
         System.out.print("성적을 수정할 학생의 학번을 입력하시오 : ");
         int num = input.nextInt();
 
-        if (num == 10001) {
-            students[0].printResult();
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] != null && students[i].getStudentID() == num) {
+                students[i].printResult();
 
-            System.out.println("성적 수정 합니다");
-            for (int j = 0; j < 3; j++) {
-                System.out.printf("과목 %d 점수 입력: ", j + 1);
-                students[0].getScore()[j] = input.nextInt();
+                System.out.println("성적 수정 합니다");
+                for (int j = 0; j < 3; j++) {
+                    System.out.printf("과목 %d 점수 입력: ", j + 1);
+                    students[i].getScore()[j] = input.nextInt();
+                }
+                students[i].printResult();
+                return;
             }
-            students[0].printResult();
-
-
-        } else if (num == 10002) {
-            students[1].printResult();
-        } else if (num == 10003) {
-            students[2].printResult();
-        } else {
-            System.out.println("학생이 없습니다");
+           
         }
+
+        System.out.println("학생이 없습니다");
         System.out.println();
 
 
     }
 
+    public static void studentdelete(Scanner input) {
+
+        System.out.print("떠나버린 학생의 학번을 입력하시오 : ");
+        int num = input.nextInt();
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] != null && students[i].getStudentID() == num) {
+                students[i].setName(null);
+
+                int[] noscore = students[i].getScore();
+                for (int j = 0; j < 3; j++) {
+                    noscore[j] = 0;
+                }
+                System.out.println();
+                return;
+            }
+
+        }
+        System.out.println("학생이 없습니다");
+        System.out.println();
+
+    }
 }
