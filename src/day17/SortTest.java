@@ -69,5 +69,6 @@ public class SortTest {
         for (int i = 0; i < hira.length; i++) {
             System.out.print(hira[i] + " ");
         }
+
     }
 }
